@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Copy & Paste</title>
+</head>
+<body>
+    <input type="text" id="pasteArea" placeholder="Tempelkan teks di sini">
+    <button onclick="pasteText()">Paste</button>
+    <input type="text" id="textToCopy" value="Teks yang akan disalin">
+    <button onclick="copyText()">Copy</button>
+</body>
+<script>
+function copyText() {
+    let text = document.getElementById("textToCopy");
+    text.select();
+    document.execCommand("copy");
+    alert("Teks telah disalin: " + text.value);
+}
+async function pasteText() {
+    try {
+        const permission = await navigator.permissions.query({ name: "clipboard-read" });
+        if (permission.state === "denied") {
+            alert("Izin clipboard ditolak. Coba izinkan akses clipboard di pengaturan browser.");
+            return;
+        }
+        let text = await navigator.clipboard.readText();
+        document.getElementById("pasteArea").value = text;
+    } catch (err) {
+        alert("Gagal menempelkan teks!");
+    }
+}
+</script>
+</html>

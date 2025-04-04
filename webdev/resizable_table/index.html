@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            position: relative;
+        }
+        .resizer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            cursor: col-resize;
+            background-color: transparent;
+            touch-action: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama <div class="resizer"></div></th>
+                <th>Usia <div class="resizer"></div></th>
+                <th>Kota <div class="resizer"></div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>Jakarta</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>30</td>
+                <td>Bandung</td>
+            </tr>
+        </tbody>
+    </table><script>
+    document.querySelectorAll('.resizer').forEach(resizer => {
+        resizer.addEventListener('mousedown', startResize);
+        resizer.addEventListener('touchstart', startResize);
+
+        function startResize(e) {
+            let th = e.target.parentElement;
+            let startX = e.touches ? e.touches[0].pageX : e.pageX;
+            let startWidth = th.offsetWidth;
+
+            function onMove(e) {
+                let moveX = e.touches ? e.touches[0].pageX : e.pageX;
+                let newWidth = startWidth + (moveX - startX);
+                th.style.width = newWidth + 'px';
+            }
+
+            function stopResize() {
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('mouseup', stopResize);
+                document.removeEventListener('touchmove', onMove);
+                document.removeEventListener('touchend', stopResize);
+            }
+
+            document.addEventListener('mousemove', onMove);
+            document.addEventListener('mouseup', stopResize);
+            document.addEventListener('touchmove', onMove);
+            document.addEventListener('touchend', stopResize);
+        }
+    });
+</script>
+
+</body>
+</html>
