@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Limited Characters</title>
+</head>
+<body>
+    <textarea id="myTextarea" maxlength="200" rows="4" cols="50" placeholder="Tulis sesuatu... (maks 200 karakter)"></textarea>
+    <p id="charCount">0 / 200 karakter</p>
+</body>
+<script>
+  const textarea = document.getElementById("myTextarea");
+  const charCount = document.getElementById("charCount");
+
+  textarea.addEventListener("input", function () {
+    const length = textarea.value.length;
+    charCount.textContent = `${length} / 200 karakter`;
+  });
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Back to The Top</title>
+    <style>
+        div {
+            margin: 0 auto 1200px;
+            width: 300px;
+            line-height: 120px;
+            background-color: #dddddd;
+            text-align: center;
+            font-size: 14px;
+        }
+        #backToTop {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          display: none;
+          padding: 10px 15px;
+          font-size: 16px;
+          background-color: #333;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div>Scrolling down the page to display the button</div>
+    <button id="backToTop">↑ Top</button>
+</body>
+<script>
+  const btn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</html>

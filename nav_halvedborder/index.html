@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Hal</title>
+    <style>
+        body {
+            margin:0;
+        }
+        nav {
+            height: fit-content;
+           background-color: #666; 
+        }
+        .menu-link {
+            padding: 10px;
+            color: #eee;
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .menu-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #eee;
+            transition: width 0.3s ease;
+        }
+        .menu-link:hover::after {
+            width: 50%;
+            left: 25%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="menu-link">Home</a>
+        <a href="#" class="menu-link">About</a>
+        <a href="#" class="menu-link">Carrier</a>
+        <a href="#" class="menu-link">Products</a>
+        <a href="#" class="menu-link">Help</a>
+    </nav>
+</body>
+</html>

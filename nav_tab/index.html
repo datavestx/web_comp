@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Tab Menu</title>
+    <style>
+        .tabs {
+          display: flex;
+          gap: 10px;
+        }
+        .tab-link {
+          padding: 10px 20px;
+          cursor: pointer;
+          background-color: #000;
+            color: #eee;
+          border: none;
+        }
+        .tab-link.active {
+          background-color: #eee;
+          color: #000;
+        }
+        .tab-content {
+          display: none;
+          padding: 20px;
+          background-color: #f1f1f1;
+        }
+        .tab-content.active {
+          display: block;
+        }  
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'tab1')">Tab 1</button>
+        <button class="tab-link" onclick="openTab(event, 'tab2')">Tab 2</button>
+        <button class="tab-link" onclick="openTab(event, 'tab3')">Tab 3</button>
+    </div>
+
+    <div id="tab1" class="tab-content active">Konten Tab 1</div>
+    <div id="tab2" class="tab-content">Konten Tab 2</div>
+    <div id="tab3" class="tab-content">Konten Tab 3</div>
+</body>
+<script>
+  function openTab(evt, tabId) {
+    // Sembunyikan semua tab
+    const contents = document.querySelectorAll(".tab-content");
+    contents.forEach(c => c.classList.remove("active"));
+
+    // Hapus class active dari semua tombol
+    const links = document.querySelectorAll(".tab-link");
+    links.forEach(l => l.classList.remove("active"));
+
+    // Tampilkan tab yang diklik
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+</script>
+</html>

@@ -1,0 +1,69 @@
+body {
+      background-color: #000;
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+.loading-wrapper {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 10;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
+.loading-text {
+      color: #0ff;
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      animation: smoothBlink 1.2s ease-in-out infinite alternate;
+    }
+.loading-container {
+      width: 80vw;
+      height: 20px;
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #0ff;
+      margin: 0 auto;
+    }
+.loading-bar {
+      height: 100%;
+      width: 0%;
+      background: #0ff;
+      animation: loading 2s linear forwards,
+                 neonFlash 1.5s ease-in-out infinite alternate,
+                 smoothBlink 1.2s ease-in-out infinite alternate;
+    }
+@keyframes loading {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+@keyframes neonFlash {
+      0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+      100% { box-shadow: 0 0 25px #0ff, 0 0 50px #0ff; }
+    }
+@keyframes smoothBlink {
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+.main-content {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+      text-align: center;
+      padding-top: 40vh;
+    }
+.main-content.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
