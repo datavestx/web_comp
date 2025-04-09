@@ -1,0 +1,30 @@
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gradient-box {
+      height: 100px;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .codes {
+      font-size: 12px;
+      margin-top: 6px;
+      opacity: 0.9;
+    }
+

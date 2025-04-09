@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reels dari Local Video</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="mobile-warning">Mobile Device Only!</div>
+  <div id="wrapper">
+    <div class="video-container" id="feed"></div>
+    <img class="swipe-hint-img" src="img/swipe.png" alt="Swipe hint" />
+    <div class="fab" onclick="toggleModal()">+</div>
+    <div class="modal" id="uploadModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="toggleModal()">X</button>
+        <div id="drop-zone">Drag & drop video</div>
+        <input type="file" id="fileInput" accept="video/*" /><br />
+        <input type="text" id="title" placeholder="Title" /><br />
+        <input type="text" id="description" placeholder="Description" /><br />
+        <button onclick="uploadVideo()">Upload</button>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>

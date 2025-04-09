@@ -1,0 +1,111 @@
+    body {
+      background: #111;
+      font-family: sans-serif;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .player {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .player select,
+    .player input[type="file"] {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .controls button {
+      padding: 10px 15px;
+      margin: 5px;
+      background: #444;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+    }
+    .progress, .volume {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .notification {
+      margin-top: 10px;
+      color: lightgreen;
+    }
+    #search {
+      width: 100%;
+      padding: 5px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    canvas {
+      width: 100%;
+      height: 50px;
+      background: #000;
+      margin-top: 10px;
+    }
+    /* Modal Styles */
+    #confirmModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #confirmModal.show {
+      display: flex;
+      opacity: 1;
+    }
+    .modal-box {
+      background: #222;
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      animation: popUp 0.3s ease;
+    }
+    @keyframes popUp {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-icon {
+      font-size: 36px;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+    .modal-buttons {
+      margin-top: 15px;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn.confirm {
+      background: #4caf50;
+      color: white;
+    }
+    .btn.cancel {
+      background: #f44336;
+      color: white;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
