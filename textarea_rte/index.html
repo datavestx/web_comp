@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor Komentar</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="editor-container">
+        <h2>Rich Text Editor</h2>
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button onclick="applyBold()">Bold</button>
+            <button onclick="applyItalic()">Italic</button>
+            <button onclick="applyUnderline()">Underline</button>
+            <button onclick="applyStrikeThrough()">Strike-through</button>
+            <button onclick="applyLink()">Insert Link</button>
+            <select onchange="changeFontFamily(this)">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+            <select onchange="changeFontSize(this)">
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="24px">24px</option>
+            </select>
+            <input type="color" onchange="changeTextColor(this)" title="Pilih warna teks">
+            <button onclick="insertEmoticon('😊')">😊</button>
+            <button onclick="insertEmoticon('😢')">😢</button>
+            <button onclick="insertEmoticon('😂')">😂</button>
+            <button onclick="insertEmoticon('😎')">😎</button>
+            <button onclick="applyBulletList()">Bullet List</button>
+            <button onclick="applyNumberedList()">Numbered List</button>
+            <button onclick="increaseIndent()">Increase Indent</button>
+            <button onclick="decreaseIndent()">Decrease Indent</button>
+            <!-- Teks Alignment -->
+            <button onclick="applyLeftAlign()">Align Left</button>
+            <button onclick="applyCenterAlign()">Align Center</button>
+            <button onclick="applyRightAlign()">Align Right</button>
+            <!-- Copy, Cut, Paste -->
+            <button onclick="copyText()">Copy</button>
+            <button onclick="cutText()">Cut</button>
+            <button onclick="pasteText()">Paste</button>
+            <!-- Attachment File -->
+            <input type="file" id="fileInput" onchange="handleFileUpload(event)">
+            <button onclick="saveComments()">Save</button>
+        </div>
+        
+        <!-- Text Area for Comment -->
+        <div id="commentArea" contenteditable="true" style="width:100%; height:200px; border:1px solid #ccc; padding: 10px; font-size: 16px; line-height: 1.5;"></div>
+        
+        <div>
+            <button onclick="submitComment()">Send</button>
+        </div>
+    </div>
+    
+    <div class="comment-section" id="commentSection">
+        <h3>Comments</h3>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,30 @@
+body { margin:0; }
+
+nav {
+    height: fit-content;
+    background-color: #666;
+}
+
+.menu-link {
+    padding: 10px;
+    color: #eee;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #eee;
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 50%;
+    left: 25%;
+}

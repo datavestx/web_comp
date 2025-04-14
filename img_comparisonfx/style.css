@@ -1,0 +1,36 @@
+.img-comp-container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.img-comp-img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-comp-overlay {
+  filter: grayscale(100%);
+  width: 50%;
+  border-right: 2px solid #fff;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 5px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+}

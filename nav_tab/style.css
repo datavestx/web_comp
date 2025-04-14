@@ -1,0 +1,25 @@
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-link {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #000;
+  color: #eee;
+  border: none;
+}
+
+.tab-link.active {
+  background-color: #eee;
+  color: #000;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.tab-content.active { display: block; }

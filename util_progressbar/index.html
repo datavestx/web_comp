@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neon Loading with Text</title>
+  <title>Progress Bar with Neon Effect</title>
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
+  
   <div class="loading-wrapper" id="loadingBar">
     <div class="loading-text">Please wait...</div>
     <div class="loading-container">
@@ -16,16 +17,7 @@
     <h1>Welcome to My Website</h1>
     <p>Please, enjoy your experience here.</p>
   </div>
+  
 </body>
-<script>
-window.onload = function () {
-  const loadingBar = document.getElementById('loadingBar');
-  const mainContent = document.getElementById('mainContent');
-  // Setelah 2 detik, sembunyikan loading & tampilkan konten utama
-  setTimeout(() => {
-    loadingBar.classList.add('hide');
-    mainContent.classList.add('show');
-  }, 2000);
-}
-</script>
+<script src="index.js"></script>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  
+  <div class="player">
+    <img id="cover" src="../_img/avatar.jpg" alt="Album Cover" width="100" height="100" />
+    <h3 id="title">Song Title:</h3>
+    
+    <canvas id="visualizer"></canvas>
+    
+    <select id="playlist"></select>
+    
+    <div class="file-upload-wrapper">
+      <label for="fileInput" class="file-upload-label"><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload</label>
+      <input type="file" id="fileInput" class="file-upload-input" multiple accept="audio/*" onchange="updateFileName(this)">
+      <span id="fileName" class="file-name">No file selected</span>
+      <button onclick="showConfirm('Hapus semua lagu?', deleteAllSongs)"><i class="fas fa-trash"></i></button>
+      <div class="volume-wrapper">
+        <button id="volumeToggle"><i class="fas fa-volume-up"></i></button>
+        <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1" />
+      </div>
+    </div>
+    
+    <input type="text" id="search" placeholder="Search the name song" />
+    <input type="range" id="progress" class="progress" value="0" min="0" max="100" step="0.1" />
+    <p id="time">0:00 / 0:00</p>
+    
+    <div class="controls">
+      <button onclick="toggleShuffle()"><i class="fas fa-random"></i></button>
+      <button onclick="prevSong()"><i class="fas fa-backward"></i></button>
+      <div class="circular-progress">
+        <svg viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00C9FF"/>
+              <stop offset="100%" stop-color="#92FE9D"/>
+            </linearGradient>
+          </defs>
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="progress-ring" cx="50" cy="50" r="45" />
+        </svg>
+        <button onclick="togglePlay()" id="playBtn"><i class="fas fa-play"></i></button>
+      </div>
+      <button onclick="nextSong()"><i class="fas fa-forward"></i></button>
+      <button onclick="toggleRepeat()" id="repeatBtn"><i class="fas fa-redo"></i></button>
+    </div>
+  
+  <div class="notification" id="notification"></div>
+  
+  <div id="confirmModal">
+    <div class="modal-box">
+      <i class="fas fa-question-circle modal-icon"></i>
+      <p id="confirmMessage">Are you sure?</p>
+      <div class="modal-buttons">
+        <button id="confirmYes" class="btn confirm">Yes</button>
+        <button id="confirmNo" class="btn cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+<script src="index.js"></script>
+</html>

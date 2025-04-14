@@ -1,0 +1,51 @@
+div {
+            margin: 0 auto 1200px;
+            width: 300px;
+            line-height: 120px;
+            background-color: #dddddd;
+            text-align: center;
+            font-size: 14px;
+}
+
+#backToTop {
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            font-size: 30px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            text-align: center;
+        }
+
+/* disabke all default properties
+button { all: unset; }
+button:active {
+            transform: none;
+            box-shadow: none;
+            background-color: none;
+}
+*/
+
+button {
+            background: none;            /* Hilangkan latar belakang */
+            border: none;                /* Hilangkan garis tepi */
+            box-shadow: none;           /* Hilangkan bayangan */
+            outline: none;              /* Hilangkan garis fokus */
+            -webkit-appearance: none;   /* Hilangkan tampilan bawaan (Safari/iOS) */
+            -moz-appearance: none;      /* Hilangkan tampilan bawaan (Firefox) */
+            appearance: none;           /* Standar hilangkan tampilan bawaan */
+            -webkit-tap-highlight-color: transparent; /* Hilangkan highlight saat ditekan (Android/iOS) */
+            font: inherit;              /* Pakai font dari parent */
+            color: inherit;             /* Pakai warna teks dari parent */
+            text-align: inherit;        /* Ikuti parent */
+            cursor: pointer;            /* Tetap kasih pointer kalau ini tombol */
+}
+
+button { -webkit-tap-highlight-color: transparent; }

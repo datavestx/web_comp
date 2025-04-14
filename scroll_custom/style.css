@@ -1,0 +1,57 @@
+body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.scroll-container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  overflow: hidden; /* sembunyikan scrollbar asli */
+  border: 1px solid #ccc;
+}
+
+.scroll-content {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  padding-right: 20px; /* biar gak ketutup scrollbar */
+}
+
+/* Hilangkan scrollbar bawaan (khusus untuk WebKit) */
+.scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  background: #f0f0f0;
+}
+
+.custom-thumb {
+  width: 100%;
+  background: #888;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  height: 50px; /* nanti diubah via JS */
+}
+
+.custom-scrollbar {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.custom-scrollbar.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

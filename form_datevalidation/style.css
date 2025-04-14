@@ -2,7 +2,7 @@ body {
       font-family: Arial, sans-serif;
       padding: 50px;
       background-color: #f4f4f4;
-    }
+}
 
 .form-date {
       background-color: white;
@@ -11,11 +11,11 @@ body {
       max-width: 300px;
       margin: auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+}
 
 label {
       font-weight: bold;
-    }
+}
 
 input[type="date"] {
       width: 100%;
@@ -24,7 +24,7 @@ input[type="date"] {
       margin-bottom: 16px;
       border-radius: 5px;
       border: 1px solid #ccc;
-    }
+}
 
 input[type="submit"] {
       width: 100%;
@@ -34,9 +34,9 @@ input[type="submit"] {
       border: none;
       border-radius: 5px;
       cursor: pointer;
-    }
+}
 
 #errorDate {
       color: red;
       text-align: center;
-    }
+}

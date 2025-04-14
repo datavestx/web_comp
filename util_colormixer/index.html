@@ -6,29 +6,31 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-<h2>Color Mixer</h2>
-<div id="pickerContainer">
-  <canvas id="colorCanvas" width="400" height="150"></canvas>
-  <div class="pointer" id="pointer"></div>
-</div>
-<div class="colors-row">
-    <div class="colorBoxContainer">
-      <div class="label">Color Box 1:</div>
-      <div id="color1" class="colorBox"></div>
-      <div id="color1Label" class="hexLabel">#FFFFFF</div>
+  
+    <h2>Color Mixer</h2>
+    <div id="pickerContainer">
+      <canvas id="colorCanvas" width="400" height="150"></canvas>
+      <div class="pointer" id="pointer"></div>
     </div>
-    <div class="colorBoxContainer">
-      <div class="label">Color Box 2:</div>
-      <div id="color2" class="colorBox"></div>
-      <div id="color2Label" class="hexLabel">#FFFFFF</div>
+    <div class="colors-row">
+        <div class="colorBoxContainer">
+          <div class="label">Color Box 1:</div>
+          <div id="color1" class="colorBox"></div>
+          <div id="color1Label" class="hexLabel">#FFFFFF</div>
+        </div>
+        <div class="colorBoxContainer">
+          <div class="label">Color Box 2:</div>
+          <div id="color2" class="colorBox"></div>
+          <div id="color2Label" class="hexLabel">#FFFFFF</div>
+        </div>
+        <div class="colorBoxContainer">
+          <div class="label">Color Box 3:</div>
+          <div id="colorMix" class="colorBox"></div>
+          <div id="colorMixLabel" class="hexLabel">#FFFFFF</div>
+        </div>
     </div>
-    <div class="colorBoxContainer">
-      <div class="label">Color Box 3:</div>
-      <div id="colorMix" class="colorBox"></div>
-      <div id="colorMixLabel" class="hexLabel">#FFFFFF</div>
-    </div>
-</div>
-<p id="hexValue">Choose the color box (1 or 2)</p>
+    <p id="hexValue">Choose the color box (1 or 2)</p>
+  
 </body>
 <script src="index.js"></script>
 </html>

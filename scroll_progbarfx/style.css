@@ -1,0 +1,18 @@
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(to right, #89F7FE, #66A6FF);
+  width: 0%;
+  z-index: 100;
+}
+
+.content {
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+

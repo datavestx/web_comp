@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background: #000;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #eee;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #eee;
+}
+
+section {
+    height: 100vh;
+    padding-top: 60px;
+} 
+

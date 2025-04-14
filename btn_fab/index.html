@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Floating Action Buttons (FAB)</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  
+    <div style="padding: 20px; max-width: 400px;">
+      <h3>Encode The URL of Message</h3>
+      <textarea id="inputText" rows="4" style="width: 100%;" placeholder="Your message here..."></textarea>
+      <button onclick="encodeMessage()" style="margin-top: 10px;">Encode</button>
+      <p><strong>Result:</strong></p>
+      <input id="encodedOutput" style="width: 100%;" readonly />
+    </div>
+      
+    <div class="fab-container">
+      <div class="fab-options" id="fabOptions">
+        <!-- WhatsApp -->
+        <a class="fab-icon whatsapp"
+          href="https://wa.me/6285879544997?text=Permisi%2C%20ada%20yang%20mau%20Saya%20tanyakan%20kepada%20Anda."
+          target="_blank" title="WhatsApp">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width: 28px; height: 28px;" />
+        </a>
+        <!-- Telegram -->
+        <a class="fab-icon telegram"
+          href="https://t.me/share/url?url=https://t.me/kukuhxp&text=Permisi%2C%20ada%20yang%20mau%20Saya%20tanyakan%20kepada%20Anda."
+          target="_blank" title="Telegram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" style="width: 28px; height: 28px;" />
+        </a>
+        <!-- Viber -->
+        <a class="fab-icon viber"
+          href="viber://forward?text=Permisi%2C%20ada%20yang%20mau%20Saya%20tanyakan%20kepada%20Anda."
+          title="Viber">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/viber.svg" alt="Viber" style="width: 28px; height: 28px;" />
+        </a>
+      </div>
+      <button class="fab-button" onclick="toggleFAB()">+</button>
+    </div>
+  
+</body>
+<script src="index.js"></script>
+</html>

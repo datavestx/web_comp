@@ -1,15 +1,19 @@
 body, h2, p {margin: 0;}
+
 img ~ a, h2, p {padding: 10px;}
+
 .container {
     display: flex;
     justify-content: space-between;
     width: 1280px;
     margin: 10px auto;
-  }
+}
+
 .post-page {
     width: 24%;
     box-shadow: 0 10px 20px -10px #ccc;
 }
+
 .post-page img {
     width: 100%;
     height: auto;

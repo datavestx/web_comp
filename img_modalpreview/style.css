@@ -4,7 +4,7 @@ body {
       text-align: center;
       margin: 0;
       padding: 40px 20px;
-    }
+}
 
 img {
       width: 100%;
@@ -13,7 +13,7 @@ img {
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
-    }
+}
 
 img:hover {
       opacity: 0.85;
@@ -28,12 +28,12 @@ img:hover {
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.9);
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       padding: 20px;
       box-sizing: border-box;
-    }
+}
 
 .modal-content {
       max-width: 100%;
@@ -42,7 +42,7 @@ img:hover {
       height: auto;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255,255,255,0.3);
-    }
+}
 
 .close {
       position: absolute;
@@ -53,16 +53,14 @@ img:hover {
       font-weight: bold;
       cursor: pointer;
       z-index: 1000;
-    }
+}
 
-.close:hover {
-      color: #ccc;
-    }
+.close:hover { color: #ccc; }
 
 @media (max-width: 600px) {
       .close {
-        font-size: 30px;
-        right: 20px;
-        top: 15px;
+            font-size: 30px;
+            right: 20px;
+            top: 15px;
       }
-    }
+}
